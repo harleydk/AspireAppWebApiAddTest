@@ -8,18 +8,18 @@ namespace Aspire1.WeatherStatisticsService.Controllers
     [ApiController]
     public class WeatherStatisticsController(ILogger<WeatherStatisticsController> logger) : ControllerBase
     {
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-            logger.LogInformation($"Called {nameof(Post)} on {nameof(WeatherStatisticsController)}");
-            return;
-        }
+        //[HttpPost]
+        //public void Post([FromBody] string value)
+        //{
+        //    logger.LogInformation($"Called {nameof(Post)} on {nameof(WeatherStatisticsController)}");
+        //    return;
+        //}
 
         [HttpGet]
         public string Get()
         {
             logger.LogInformation($"Called {nameof(Get)} on {nameof(WeatherStatisticsController)}");
-            return string.Empty;
+            return Guid.NewGuid().ToString();
         }
     }
 }

@@ -2,13 +2,14 @@ IDistributedApplicationBuilder builder = DistributedApplication.CreateBuilder(ar
 
 IResourceBuilder<RedisContainerResource> cache = builder.AddRedisContainer("cache");
 
-IResourceBuilder<ProjectResource> weatherStatisticsService = builder.AddProject<Projects.Aspire1_WeatherStatisticsService>("weatherstatisticsservice");
+IResourceBuilder<ProjectResource> weatherStatisticsService = builder.AddProject<Projects.Aspire1_WeatherStatisticsService>("weatherstatisticsservice2");
 
-IResourceBuilder<ProjectResource> apiservice = builder.AddProject<Projects.AspireApp1_ApiService>("apiservice")
-    .WithReference(weatherStatisticsService);
+IResourceBuilder<ProjectResource> apiservice = builder.AddProject<Projects.AspireApp1_ApiService>("apiservice");
+//.WithReference(weatherStatisticsService);
 
 builder.AddProject<Projects.AspireApp1_Web>("webfrontend")
     .WithReference(cache)
-    .WithReference(apiservice);
+    .WithReference(weatherStatisticsService)
+.WithReference(apiservice);
 
 builder.Build().Run();

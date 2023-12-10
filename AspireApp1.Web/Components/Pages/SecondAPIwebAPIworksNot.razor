@@ -1,0 +1,17 @@
+﻿@page "/regularAPiWorksNot"
+@rendermode InteractiveServer
+@inject WeatherStatisticsClient WeatherStatisticsClient
+
+
+<h1>regularAPiWorksNot</h1>
+
+@RetrievedData
+
+@code {
+    private string? RetrievedData;
+
+    protected override async Task OnInitializedAsync()
+    {
+        RetrievedData = await WeatherStatisticsClient.SendWeatherDataHttpGet(); // doesn't work - controller-based get
+    }
+}

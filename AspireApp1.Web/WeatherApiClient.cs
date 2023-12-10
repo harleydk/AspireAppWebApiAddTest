@@ -2,16 +2,10 @@ namespace AspireApp1.Web;
 
 public class WeatherApiClient(HttpClient httpClient, ILogger<WeatherApiClient> logger)
 {
-    public async Task<WeatherForecast[]> GetWeatherAsyncHttpGet()
+    public async Task<WeatherForecast[]> GetWeatherAsync()
     {
-        logger.LogInformation($"Called {nameof(GetWeatherAsyncHttpGet)} on {nameof(WeatherApiClient)}");
-        return await httpClient.GetFromJsonAsync<WeatherForecast[]>("/weatherforecastGet") ?? [];
-    }
-
-    public async Task<WeatherForecast[]> GetWeatherAsyncHttpPost()
-    {
-        logger.LogInformation($"Called {nameof(GetWeatherAsyncHttpGet)} on {nameof(WeatherApiClient)}");
-        return await httpClient.GetFromJsonAsync<WeatherForecast[]>("/weatherforecastPost") ?? [];
+        logger.LogInformation($"Called {nameof(GetWeatherAsync)} on {nameof(WeatherApiClient)}");
+        return await httpClient.GetFromJsonAsync<WeatherForecast[]>("/weatherforecast") ?? [];
     }
 }
 
