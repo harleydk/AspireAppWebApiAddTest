@@ -1,10 +1,10 @@
-﻿@page "/weatherPost"
+﻿@page "/weather"
 @attribute [StreamRendering(true)]
 @attribute [OutputCache(Duration = 5)]
 
 @inject WeatherApiClient WeatherApi
 
-<PageTitle>WeatherFromPost</PageTitle>
+<PageTitle>Weather</PageTitle>
 
 <h1>Weather</h1>
 
@@ -44,6 +44,6 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await WeatherApi.GetWeatherAsyncHttpPost();
+        forecasts = await WeatherApi.GetWeatherAsync();
     }
 }
