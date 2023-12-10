@@ -12,6 +12,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireApp1.Web", "AspireApp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aspire1.WeatherStatisticsService", "Aspire1.WeatherStatisticsService\Aspire1.WeatherStatisticsService.csproj", "{A1B7442E-8F91-4E5E-BE4B-DCF339C9CC9B}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkerService1", "WorkerService1\WorkerService1.csproj", "{8877C349-A8A9-4B61-BFB5-80E0D43B3EB9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{A1B7442E-8F91-4E5E-BE4B-DCF339C9CC9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1B7442E-8F91-4E5E-BE4B-DCF339C9CC9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1B7442E-8F91-4E5E-BE4B-DCF339C9CC9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8877C349-A8A9-4B61-BFB5-80E0D43B3EB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8877C349-A8A9-4B61-BFB5-80E0D43B3EB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8877C349-A8A9-4B61-BFB5-80E0D43B3EB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8877C349-A8A9-4B61-BFB5-80E0D43B3EB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

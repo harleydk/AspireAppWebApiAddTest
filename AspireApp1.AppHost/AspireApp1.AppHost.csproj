@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -12,10 +12,12 @@
     <ProjectReference Include="..\Aspire1.WeatherStatisticsService\Aspire1.WeatherStatisticsService.csproj" />
     <ProjectReference Include="..\AspireApp1.ApiService\AspireApp1.ApiService.csproj" />
     <ProjectReference Include="..\AspireApp1.Web\AspireApp1.Web.csproj" />
+    <ProjectReference Include="..\WorkerService1\WorkerService1.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Aspire.Hosting" Version="8.0.0-preview.1.23557.2" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
   </ItemGroup>
 
 </Project>
